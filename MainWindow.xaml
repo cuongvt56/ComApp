@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="ComApp.MainWindow"
+        Title="TestApp" Height="215" Width="900">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <ComboBox x:Name="cbPorts" Grid.Column="0" Width="100" Height="30" VerticalAlignment="Top" Margin="0,5,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <ComboBox x:Name="cbBaudRate" Grid.Column="0" Width="100" Height="30" VerticalAlignment="Top"  Margin="0,40,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btConnect" Grid.Column="0" Content="Connect" Width="100" Height="30" VerticalAlignment="Top"  Margin="0,75,0,0"  Click="BtConnect_Click"/>
+        <TextBox x:Name="tbCycleTime" Grid.Column="0"  Width="40" Height="30"  VerticalAlignment="Top" Margin="-60,110,0,0" 
+                 Text="1000" TextAlignment="Center" VerticalContentAlignment="Center" TextChanged="TbCycleTime_TextChanged"/>
+        <TextBox x:Name="tbLineNumber" Grid.Column="0" Width="40" Height="30" Margin="-60,145,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" TextAlignment="Center" Text="10" />
+        <CheckBox x:Name="cbAutoSend" Grid.Column="0" Width="50" Height="15" Content="Auto" Margin="45,118,0,0" VerticalAlignment="Top" Checked="CbAutoSend_Checked" Unchecked="CbAutoSend_Unchecked"/>
+        <CheckBox x:Name="cbAutoClear" Grid.Column="0" Width="50" Height="15" Content="Clear" Margin="45,152,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbData" Grid.Column="1" Width="640" Height="30" Margin="0,5,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="tbDataReceiver" Grid.Column="1" Width="640" Height="130" Margin="0,40,0,0" VerticalAlignment="Top" IsReadOnly="True" TextWrapping="Wrap"/>
+        <Button x:Name="btSend" Grid.Column="2" Content="Send data" Height="30" Width="100" Margin="0,5,0,0" VerticalAlignment="Top" Click="BtSend_Click"/>
+        <Button x:Name="btnClearData" Grid.Column="2" Content="Clear" Width="100" Height="30" Margin="5,90,0,0" VerticalAlignment="Top"  Click="BtnClearData_Click"/>
+        
+    </Grid>
+</Window>
